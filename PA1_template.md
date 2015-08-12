@@ -139,6 +139,7 @@ Let's see the daily pattern.
 plot(intraday, t='l',
      main='Averege number of steps in 5-minutes intervals',
      xlab='interval label',
+     ylab='steps',
      xaxt='n')
 index<- data.raw$interval==0 | 
       data.raw$interval==800 | 
@@ -301,6 +302,7 @@ plot(intraday.weekdays, t='l',
      main='Averege number of steps in 5-minutes intervals in weekdays',
      xlab='interval label',
      ylab='steps',
+     ylim=c(0, max(intraday.weekends,intraday.weekdays)),
      xaxt='n')
 index<- data$interval==0 | 
       data$interval==800 | 
@@ -313,6 +315,7 @@ plot(intraday.weekends, t='l',
      main='Averege number of steps in 5-minutes intervals in weekends',
      xlab='interval label',
      ylab='steps',
+     ylim=c(0, max(intraday.weekends,intraday.weekdays)),
      xaxt='n')
 index<- data$interval==0 | 
       data$interval==800 | 
